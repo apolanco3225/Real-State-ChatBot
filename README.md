@@ -27,7 +27,7 @@ The Real Estate Chatbot consists of two main components:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/apolanco3225/Real-State-ChatBot/tree/main
 cd Real-State-ChatBot
 ```
 
