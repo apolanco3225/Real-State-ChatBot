@@ -1,10 +1,90 @@
-# Real State ChatBot 
+# Real Estate Chatbot
 
-This version of the chatbot is executed from a jupyter notebook file, it is only necessary to install the required packages from the readme file in order to execute all cells successfully.
+A chatbot application that helps users find their ideal property in New York City by matching their requirements with available properties in the database.
 
-The listing generations in contained in a file called "Personalized listing generations", you need to the inputs with friendly user interfaces that manipulate dropboxes and sliders in order to generate a nice house listing.
-![WhatsApp Image 2024-02-12 at 4 42 58 PM](https://github.com/apolanco3225/Real-State-ChatBot/assets/16232171/8c21faca-0140-401a-a3ef-a5029c416eaf)
+## Features
 
+- Property search based on user requirements
+- Similarity matching between user requirements and available properties
+- Interactive web interface using Gradio
+- Vector database for efficient property search
+- OpenAI integration for natural language processing
 
-The Chatbot is included in a file called "Real State Chatbot", just execute the jupyter notebook file and introduce a query in the text box with the information of the house that you desired, then click on the "Generate Suggestion" button in order to consult in the database with the listing with most similarity with your input query. Finally, click on the "Find Similarities" button to return the common and uncommon items among your query and the result that was found in the database.
-![WhatsApp Image 2024-02-13 at 10 43 01 AM](https://github.com/apolanco3225/Real-State-ChatBot/assets/16232171/846cca5d-00f1-4763-a0a9-5dd0317779fb)
+## Overview
+
+The Real Estate Chatbot consists of two main components:
+
+1. **Personalized Listing Generator**: A user-friendly interface with dropdowns and sliders to generate detailed house listings.
+![Personalized Listing Generator Interface](https://github.com/apolanco3225/Real-State-ChatBot/assets/16232171/8c21faca-0140-401a-a3ef-a5029c416eaf)
+
+2. **Property Matching Chatbot**: An interactive interface where users can:
+   - Enter their property requirements
+   - Get property suggestions based on similarity
+   - Compare their requirements with suggested properties
+![Property Matching Interface](https://github.com/apolanco3225/Real-State-ChatBot/assets/16232171/846cca5d-00f1-4763-a0a9-5dd0317779fb)
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd Real-State-ChatBot
+```
+
+2. Create a virtual environment and activate it:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file in the root directory and add your OpenAI API key:
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+## Usage
+
+### Running the Application
+
+1. Start the application:
+```bash
+python src/app.py
+```
+
+2. Open your web browser and navigate to the URL shown in the terminal (usually http://127.0.0.1:7860)
+
+### Using the Chatbot
+
+1. Enter your property requirements in the text box
+2. Click "Generate Suggestion" to find the most similar property in the database
+3. Click "Find Similarities" to see the common and uncommon items between your requirements and the suggested property
+
+## Project Structure
+
+```
+Real-State-ChatBot/
+├── src/
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── database.py
+│   └── ai_service.py
+├── requirements.txt
+├── README.md
+└── .env
+```
+
+## Requirements
+
+- Python 3.9+
+- OpenAI API key
+- Internet connection for API calls
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
